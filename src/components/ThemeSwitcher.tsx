@@ -5,7 +5,9 @@ import Icon from '@mdi/react';
 import { useEffect, useState } from 'react';
 
 const ThemeSwitcher = () => {
-  const [theme, setTheme] = useState(window.localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(() => {
+    if (typeof window !== 'undefined') return localStorage.getItem('theme') || 'light';
+  });
 
   useEffect(() => {
     if (theme === 'dark') {
@@ -16,9 +18,11 @@ const ThemeSwitcher = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-    window.localStorage.setItem('theme', newTheme);
+    if (typeof window !== 'undefined') {
+      const newTheme = theme === 'light' ? 'dark' : 'light';
+      setTheme(newTheme);
+      localStorage.setItem('theme', newTheme);
+    }
   };
 
   return (
