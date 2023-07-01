@@ -4,20 +4,23 @@ import NavBar from './Navbar';
 
 function Hero() {
   return (
-    <main className='mx-auto flex min-h-[80vh] max-w-screen-8xl flex-col justify-between px-24'>
+    <main className='mx-auto flex min-h-[85vh] max-w-screen-8xl flex-col justify-between px-6 lg:px-24'>
       <NavBar></NavBar>
       <div className='space-y-12'>
-        <h1 className='text-7xl font-medium leading-snug'>
-          Konnichiwassup,{' '}
+        <h1 className='text-3xl font-medium !leading-snug md:text-4xl lg:text-7xl'>
+          Konnichiwassup, <br className='block md:hidden lg:block xl:hidden' />
           <span>
-            I&apos;am{' '}
+            I&apos;m{' '}
             <span className='highlight'>
               Lyle <span className='font-noto'>(ライル)!</span>
             </span>
           </span>
-          <br />A passionate <span className='highlight'>Web Developer</span> from the <span className='highlight'>Philippines!</span>
+          <br />A passionate <br className='block md:hidden lg:block xl:hidden' />
+          <span className='highlight'>Web Developer</span> from the <span className='highlight'>Philippines!</span>
         </h1>
-        <h2 className='text-2xl'>Unlock Your Potential: I&apos;ll solve your website woes, while you stay focused on your goals.</h2>
+        <h2 className='max-w-md text-xl lg:text-2xl'>
+          Unlock Your Potential: I&apos;ll solve your website woes, while you stay focused on your goals.
+        </h2>
         <ul className='flex gap-x-2'>
           {SOCIALS.map((x, i) => (
             <li key={i}>
@@ -28,7 +31,7 @@ function Hero() {
           ))}
         </ul>
       </div>
-      <div className='border-t-4'></div>
+      <div className='my-4 border-t-4 border-black px-6 dark:border-white'></div>
     </main>
   );
 }

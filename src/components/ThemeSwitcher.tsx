@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 
 const ThemeSwitcher = () => {
   const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') return localStorage.getItem('theme') || 'light';
+    if (typeof window !== 'undefined') return localStorage.getItem('theme') || 'dark';
   });
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <label className='swap swap-rotate p-2'>
+    <label className='swap swap-rotate p-1 '>
       <input type='checkbox' checked={theme === 'light'} onChange={toggleTheme} />
       <Icon className={`swap-on `} path={mdiWhiteBalanceSunny} size='24px' />
       <Icon className={`swap-off `} path={mdiWeatherNight} size='24px' />
