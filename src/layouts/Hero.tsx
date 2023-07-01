@@ -11,12 +11,12 @@ function Hero() {
           Konnichiwassup, <br className='block md:hidden lg:block xl:hidden' />
           <span>
             I&apos;m{' '}
-            <span className='highlight'>
+            <span className='highlight px-4'>
               Lyle <span className='font-noto'>(ライル)!</span>
             </span>
           </span>
           <br />A passionate <br className='block md:hidden lg:block xl:hidden' />
-          <span className='highlight'>Web Developer</span> from the <span className='highlight'>Philippines!</span>
+          <span className='highlight px-4'>Web Developer</span> from the <span className='highlight px-4'>Philippines!</span>
         </h1>
         <p className='text-xl lg:text-2xl'>
           Unlock Your Potential: I&apos;ll solve your website woes, <br className='hidden md:block' />

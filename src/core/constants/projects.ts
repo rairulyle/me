@@ -41,7 +41,7 @@ export const PROJECTS = [
   {
     name: 'Manulife - CWS (PH/IND/VN)',
     description:
-      'A multi-country customer website that allows users to easily view their Manulife policy information, check fund value, view payment information, and pay online. All in a few taps and clicks on mobile phone, tablet or laptop.',
+      'A multi-country customer website that allows users to easily view their Manulife policy information, check fund value, view payment information, and pay online.',
     image: '/showcase/manulife-cws.webp',
     link: 'https://online.manulife.com.ph/login',
   },
@@ -53,7 +53,7 @@ export const PROJECTS = [
     link: '#',
   },
   {
-    name: 'Personal Home Assistant',
+    name: 'PSVita - Persona 5 Theme',
     description: 'A personal project, this was in the Top 10 of the most downloaded themes with 29,500+ downloads.',
     image: '/showcase/p5-vita-theme.webp',
     link: 'https://psvt.ovh/theme.php?id=1521459131',
@@ -65,9 +65,9 @@ export const PROJECTS = [
     link: '#',
   },
   {
-    name: 'Air Quality Monitoring System (AQMS)',
+    name: 'Air Quality Monitoring System',
     description:
-      'A local municipality project that aims to monitor the surface air quality from the different distant zones and provide necessary information such as the prevalent pollutant, its AQI value and synthesis, and the rolling 24-hour AQI Graph.',
+      'A local municipality project that aims to monitor the surface air quality from the different distant zones and provide necessary information such as the prevalent pollutant.',
     image: '/showcase/aqms.webp',
     link: 'https://www.researchgate.net/publication/338231298_Multi_Zone-Based_Surface_Air_Quality_Monitoring_via_Internet_of_Things',
   },

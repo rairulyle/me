@@ -4,7 +4,7 @@ import { PROJECTS } from '@/core/constants/projects';
 import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
 import Icon from '@mdi/react';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { scrollTo } from 'seamless-scroll-polyfill';
 
 function ProjectShowcase() {
@@ -32,12 +32,12 @@ function ProjectShowcase() {
   return (
     <section id='showcase'>
       <span className='text-2xl'>
-        Currently, I work for <span className='highlight'>theQuestHub.io</span> as a{' '}
-        <span className='highlight'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
+        Currently, I work for <span className='highlight px-1'>theQuestHub.io</span> as a{' '}
+        <span className='highlight px-1'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
       </span>
       <div className='flex items-center justify-between'>
         <h2 className='my-12 text-4xl'>Project showcase.</h2>
-        <div className='hidden gap-x-2 lg:flex'>
+        <div className='hidden gap-x-2 md:flex'>
           <button
             aria-label='Swipe Left'
             className='border-4 border-black px-3 py-2  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
@@ -66,10 +66,13 @@ function ProjectShowcase() {
             >
               <Image className='min-w-[326px] md:min-w-[582px]' src={x.image} width='582' height='645' alt={x.name}></Image>
               <span className='text-xl font-semibold'>{x.name}</span>
-              <p className='w-[80%]'>{x.description}</p>
+              <p className='w-full md:w-[80%]'>{x.description}</p>
             </a>
           ))}
         </div>
+        <span className='mt-3 flex items-center justify-end gap-x-2 md:hidden'>
+          <Icon className='animate-bounce-left' path={mdiChevronLeft} size='24px'></Icon> Swipe Left
+        </span>
       </div>
     </section>
   );
