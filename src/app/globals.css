@@ -2,22 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply font-sans;
-  @apply overflow-x-hidden;
 }
 
 .highlight {
   @apply bg-black px-4 text-white dark:bg-white dark:text-black;
 }
 
-.hide-scroll {
-  @apply overflow-scroll;
-}
-
-.hide-scroll::-webkit-scrollbar {
-  background: transparent; /* make scrollbar transparent */
-  width: 0px;
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  @apply lg:hidden;
 }
 
 /* Swap Utility */
