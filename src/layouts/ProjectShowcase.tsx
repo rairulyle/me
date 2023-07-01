@@ -39,12 +39,14 @@ function ProjectShowcase() {
         <h2 className='my-12 text-4xl'>Project showcase.</h2>
         <div className='hidden gap-x-2 lg:flex'>
           <button
+            aria-label='Swipe Left'
             className='border-4 border-black px-3 py-2  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
             onClick={swipeLeft}
           >
             <Icon size='24px' path={mdiChevronLeft}></Icon>
           </button>
           <button
+            aria-label='Swipe Right'
             className='border-4 border-black px-3 py-2  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
             onClick={swipeRight}
           >
