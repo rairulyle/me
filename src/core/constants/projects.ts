@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     name: 'My Wedding Invitation',
-    description: 'Served us our meticulously crafted invitation letter for our esteemed and beloved guest',
+    description: 'Served as our meticulously crafted invitation letter for our esteemed and beloved guests',
     image: '/showcase/lyle-and-marga.webp',
     link: 'https://lyle-and-marga.com/',
   },
@@ -54,7 +54,7 @@ export const PROJECTS = [
   },
   {
     name: 'Personal Home Assistant',
-    description: 'A personal project Persona 5-inspired theme for PS Vita. Top 10 most downloaded theme with over 29,500+ downloads.',
+    description: 'A personal project, this was in the Top 10 of the most downloaded themes with 29,500+ downloads.',
     image: '/showcase/p5-vita-theme.webp',
     link: 'https://psvt.ovh/theme.php?id=1521459131',
   },
@@ -74,14 +74,14 @@ export const PROJECTS = [
   {
     name: 'EZ-Search',
     description:
-      'A local municipality project that aims to monitor the surface air quality from the different distant zones and provide necessary information such as the prevalent pollutant, its AQI value and synthesis, and the rolling 24-hour AQI Graph.',
+      'A personal company project in OOCL that allows users to easily extract AN/DO payload from all environments (PROD, PRE-PROD, and QA).',
     image: '/showcase/ez-search.webp',
     link: '#',
   },
   {
     name: 'EZ-DBCompare',
     description:
-      'A local municipality project that aims to monitor the surface air quality from the different distant zones and provide necessary information such as the prevalent pollutant, its AQI value and synthesis, and the rolling 24-hour AQI Graph.',
+      'A personal company project in OOCL that allows users to easily compare database tables from all environments (PROD, PRE-PROD, and QA).',
     image: '/showcase/ez-dbcompare.webp',
     link: '#',
   },
