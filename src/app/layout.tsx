@@ -24,11 +24,7 @@ export const metadata: Metadata = {
     title,
     description,
     siteName: title,
-    images: [
-      {
-        url: `${url}/meta/og.png`,
-      },
-    ],
+    images: `${url}/meta/og.png`,
   },
   twitter: { card: 'summary_large_image', site: '@rairulyle', creator: '@rairulyle', images: `${url}/meta/og.png` },
 };
