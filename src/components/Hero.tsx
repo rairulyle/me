@@ -18,8 +18,9 @@ function Hero() {
           <br />A passionate <br className='block md:hidden lg:block xl:hidden' />
           <span className='highlight'>Web Developer</span> from the <span className='highlight'>Philippines!</span>
         </h1>
-        <h2 className='max-w-md text-xl lg:text-2xl'>
-          Unlock Your Potential: I&apos;ll solve your website woes, while you stay focused on your goals.
+        <h2 className='text-xl lg:text-2xl'>
+          Unlock Your Potential: I&apos;ll solve your website woes, <br className='hidden md:block' />
+          while you stay focused on your goals.
         </h2>
         <ul className='flex gap-x-2'>
           {SOCIALS.map((x, i) => (
