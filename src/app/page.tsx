@@ -1,17 +1,15 @@
-import Hero from '@/components/Hero';
+import Footer from '@/layouts/Footer';
+import Hero from '@/layouts/Hero';
+import FeaturedWork from '@/layouts/ProjectShowcase';
 
 export default function Home() {
   return (
     <>
       <Hero></Hero>
-      <div className='mx-auto mt-12 max-w-screen-8xl space-y-24 px-6 lg:px-24'>
-        <section>
-          <span className='text-2xl'>
-            Currently, I work for <span className='highlight'>theQuestHub.io</span> as a{' '}
-            <span className='highlight'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
-          </span>
-        </section>
+      <div className='mx-auto mt-12 max-w-screen-8xl space-y-24 divide-y-4 divide-black px-6 dark:divide-white lg:px-24'>
+        <FeaturedWork></FeaturedWork>
       </div>
+      <Footer></Footer>
     </>
   );
 }

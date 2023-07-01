@@ -1,6 +1,6 @@
 import { mdiSkullOutline } from '@mdi/js';
 import Icon from '@mdi/react';
-import ThemeSwitcher from './ThemeSwitcher';
+import ThemeSwitcher from '../components/ThemeSwitcher';
 
 function NavBar() {
   return (
@@ -25,7 +25,12 @@ function NavBar() {
             <ThemeSwitcher></ThemeSwitcher>
           </li>
           <li className='hidden md:block'>
-            <a href='mailto:lylevincedelacuesta@gmail.com' className='border-4 border-black px-6 py-4 dark:border-white'>
+            <a
+              href='https://www.linkedin.com/in/rairulyle'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='border-4 border-black px-6 py-4 dark:border-white'
+            >
               Contact
             </a>
           </li>
