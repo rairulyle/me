@@ -17,7 +17,7 @@ function NavBar() {
             </a>
           </li>
           <li className='hidden md:block'>
-            <a className='px-6 py-4' href='/#showcase'>
+            <a className='px-6 py-4' href='/#services'>
               Services
             </a>
           </li>
@@ -31,7 +31,7 @@ function NavBar() {
               rel='noopener noreferrer'
               className='border-4 border-black px-6 py-4 dark:border-white'
             >
-              Contact
+              Contact Me
             </a>
           </li>
         </ul>

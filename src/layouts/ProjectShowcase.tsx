@@ -36,7 +36,7 @@ function ProjectShowcase() {
         <span className='highlight px-1'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
       </span>
       <div className='flex items-center justify-between'>
-        <h2 className='mb-6 mt-12 text-2xl md:text-4xl'>Project showcase.</h2>
+        <h2 className='mb-6 mt-12 text-2xl font-semibold md:text-4xl'>Project showcase.</h2>
         <div className='hidden gap-x-2 md:flex'>
           <button
             aria-label='Swipe Left'
@@ -60,8 +60,14 @@ function ProjectShowcase() {
         </span>
         <div id='swipe-container' className='no-scrollbar flex gap-x-12 overflow-x-auto transition-transform '>
           {PROJECTS.map((x, i) => (
-            <a className='flex snap-center flex-col gap-y-6' key={i} href={x.link} target='_blank' rel='noopener noreferrer'>
-              <Image className='min-w-[326px] md:min-w-[582px]' src={x.image} width='582' height='645' alt={x.name}></Image>
+            <a
+              className='flex snap-center flex-col gap-y-6 transition-transform hover:-translate-y-2'
+              key={i}
+              href={x.link}
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <Image className='min-w-[326px] md:min-w-[582px]' src={x.image} width='1164' height='1290' alt={x.name}></Image>
               <div className='space-y-2'>
                 <span className='text-xl font-semibold'>{x.name}</span>
                 <ul className='flex gap-x-2'>

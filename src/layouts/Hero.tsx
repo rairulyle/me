@@ -1,6 +1,7 @@
 import { SOCIALS } from '@/core/constants/socials';
 import Icon from '@mdi/react';
 import NavBar from './Navbar';
+import Image from 'next/image';
 
 function Hero() {
   return (
@@ -32,7 +33,32 @@ function Hero() {
           ))}
         </ul>
       </div>
-      <div className='my-4 border-t-4 border-black px-6 dark:border-white'></div>
+      <div>
+        <div className='flex items-center gap-x-2'>
+          <span className='text-sm'>This portfolio was built with</span>
+          <ul className='flex gap-x-2'>
+            <li>
+              <Image title='Next.js' alt='Next.js' width='18' height='18' src={`/tech/Next.js.webp`} className='grayscale'></Image>
+            </li>
+            <li>
+              <Image title='React' alt='React' width='18' height='18' src={`/tech/React.webp`} className='grayscale'></Image>
+            </li>
+
+            <li>
+              <Image
+                title='Tailwind CSS'
+                alt='Tailwind CSS'
+                width='18'
+                height='18'
+                src={`/tech/Tailwind CSS.webp`}
+                className='grayscale'
+              ></Image>
+            </li>
+          </ul>
+        </div>
+
+        <div className='my-4 border-t-4 border-black px-6 dark:border-white'></div>
+      </div>
     </main>
   );
 }
