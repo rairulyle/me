@@ -5,7 +5,7 @@ import Icon from '@mdi/react';
 function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className='mx-auto flex max-w-screen-8xl flex-col items-center justify-between gap-y-6 px-6 pb-24 pt-48 md:flex-row lg:px-24'>
+    <footer className='mx-auto flex max-w-screen-8xl flex-col items-center justify-between gap-y-6 px-6 pb-12 pt-48 md:flex-row lg:px-24'>
       <a className='inline-flex items-center gap-x-2' href='/'>
         <Icon path={mdiSkullOutline} size='48px'></Icon>
         <span className='font-noto text-2xl font-bold'>ライル</span>

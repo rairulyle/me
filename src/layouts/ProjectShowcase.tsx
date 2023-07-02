@@ -31,12 +31,12 @@ function ProjectShowcase() {
 
   return (
     <section id='showcase'>
-      <span className='text-2xl'>
+      <span className='text-xl md:text-2xl'>
         Currently, I work for <span className='highlight px-1'>theQuestHub.io</span> as a{' '}
         <span className='highlight px-1'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
       </span>
       <div className='flex items-center justify-between'>
-        <h2 className='my-12 text-4xl'>Project showcase.</h2>
+        <h2 className='mb-6 mt-12 text-2xl md:text-4xl'>Project showcase.</h2>
         <div className='hidden gap-x-2 md:flex'>
           <button
             aria-label='Swipe Left'
@@ -54,7 +54,10 @@ function ProjectShowcase() {
           </button>
         </div>
       </div>
-      <div>
+      <div className='space-y-3'>
+        <span className='flex items-center gap-x-2 md:hidden'>
+          <Icon className='animate-bounce-left' path={mdiChevronLeft} size='24px'></Icon> Swipe left for more.
+        </span>
         <div id='swipe-container' className='no-scrollbar -mx-6 flex gap-x-12 overflow-x-auto transition-transform lg:-mx-24'>
           {PROJECTS.map((x, i) => (
             <a
@@ -70,9 +73,6 @@ function ProjectShowcase() {
             </a>
           ))}
         </div>
-        <span className='mt-3 flex items-center justify-end gap-x-2 md:hidden'>
-          <Icon className='animate-bounce-left' path={mdiChevronLeft} size='24px'></Icon> Swipe Left
-        </span>
       </div>
     </section>
   );
