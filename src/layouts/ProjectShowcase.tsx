@@ -31,10 +31,14 @@ function ProjectShowcase() {
 
   return (
     <section id='showcase'>
-      <span className='text-xl md:text-2xl'>
-        Currently, I work for <span className='highlight px-1'>theQuestHub.io</span> as a{' '}
-        <span className='highlight px-1'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
-      </span>
+      <div className='space-y-2 text-xl md:text-2xl'>
+        <p>
+          Currently, I work for <span className='highlight px-1'>theQuestHub.io</span> as a{' '}
+          <span className='highlight px-1'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
+        </p>
+        <p>I also contribute to some open-source projects.</p>
+      </div>
+
       <div className='flex items-center justify-between'>
         <h2 className='mb-6 mt-12 text-2xl font-semibold md:text-4xl'>Project showcase.</h2>
         <div className='hidden gap-x-2 md:flex'>
