@@ -24,7 +24,7 @@ function Services() {
           href='https://www.linkedin.com/in/rairulyle'
           target='_blank'
           rel='noopener noreferrer'
-          className='border-4 border-black px-6 py-4 dark:border-white'
+          className='border-4 border-black px-6 py-4  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
         >
           Contact Me
         </a>
