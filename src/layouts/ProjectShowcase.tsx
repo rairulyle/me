@@ -58,15 +58,9 @@ function ProjectShowcase() {
         <span className='flex items-center gap-x-2 md:hidden'>
           <Icon className='animate-bounce-left' path={mdiChevronLeft} size='24px'></Icon> Swipe left for more.
         </span>
-        <div id='swipe-container' className='no-scrollbar -mx-6 flex gap-x-12 overflow-x-auto transition-transform lg:-mx-24'>
+        <div id='swipe-container' className='no-scrollbar flex gap-x-12 overflow-x-auto transition-transform '>
           {PROJECTS.map((x, i) => (
-            <a
-              className='flex snap-center flex-col gap-y-6 first:pl-6 last:pr-6 lg:first:pl-24 lg:last:pr-24'
-              key={i}
-              href={x.link}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
+            <a className='flex snap-center flex-col gap-y-6' key={i} href={x.link} target='_blank' rel='noopener noreferrer'>
               <Image className='min-w-[326px] md:min-w-[582px]' src={x.image} width='582' height='645' alt={x.name}></Image>
               <div className='space-y-2'>
                 <span className='text-xl font-semibold'>{x.name}</span>

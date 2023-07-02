@@ -4,7 +4,7 @@ import NavBar from './Navbar';
 
 function Hero() {
   return (
-    <main className='mx-auto flex min-h-[85vh] max-w-screen-8xl flex-col justify-between px-6 lg:px-24'>
+    <main className='mx-auto flex min-h-[85vh] max-w-screen-8xl flex-col justify-between px-6'>
       <NavBar></NavBar>
       <div className='space-y-12'>
         <h1 className='text-3xl font-medium !leading-snug md:text-4xl lg:text-7xl'>
