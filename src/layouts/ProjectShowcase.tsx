@@ -68,7 +68,16 @@ function ProjectShowcase() {
               rel='noopener noreferrer'
             >
               <Image className='min-w-[326px] md:min-w-[582px]' src={x.image} width='582' height='645' alt={x.name}></Image>
-              <span className='text-xl font-semibold'>{x.name}</span>
+              <div className='space-y-2'>
+                <span className='text-xl font-semibold'>{x.name}</span>
+                <ul className='flex gap-x-2'>
+                  {x.tech?.map((x, i) => (
+                    <li key={i}>
+                      <Image title={x} alt={x} width='24' height='24' src={`/tech/${x}.webp`} className='grayscale'></Image>
+                    </li>
+                  ))}
+                </ul>
+              </div>
               <p className='w-full md:w-[80%]'>{x.description}</p>
             </a>
           ))}
