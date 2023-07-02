@@ -13,10 +13,7 @@ function Services() {
         </p>
         <ul className='flex flex-wrap gap-2'>
           {SKILLS.map((x, i) => (
-            <li
-              className='border-4 border-black px-3 py-2  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
-              key={i}
-            >
+            <li className='border-4 border-black px-3 py-2   dark:border-white' key={i}>
               {x}
             </li>
           ))}
