@@ -36,7 +36,7 @@ function ProjectShowcase() {
           Currently, I work for <span className='highlight px-1'>theQuestHub.io</span> as a{' '}
           <span className='highlight px-1'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
         </p>
-        <p>I also contribute to some open-source projects.</p>
+        <p>I also contribute to a few open-source projects.</p>
       </div>
 
       <div className='flex items-center justify-between'>
