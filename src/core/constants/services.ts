@@ -21,3 +21,5 @@ export const SERVICES = [
       "With my meticulous care and attention to detail, I'll ensure that your website stays in top shape, delivering a flawless experience to your visitors. From regular updates to security enhancements, I've got you covered!",
   },
 ];
+
+export const SKILLS = ['Angular', 'React', 'SvelteKit', 'Tailwind CSS', 'Next.js', 'Node.js', 'Word Press', 'Figma'];
