@@ -2,6 +2,7 @@ import '@fontsource-variable/outfit';
 import '@fontsource/noto-sans-jp/500.css';
 import '@fontsource/noto-sans-jp/800.css';
 import { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
 
@@ -32,7 +33,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en' className='dark'>
-      <body className='bg-white text-black dark:bg-black dark:text-white'>{children}</body>
+      <body className='bg-white text-black dark:bg-black dark:text-white'>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
