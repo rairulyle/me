@@ -33,8 +33,11 @@ function ProjectShowcase() {
     <section id='showcase'>
       <div className='space-y-2 text-xl md:text-2xl'>
         <p>
-          Currently, I work for <span className='highlight px-1'>theQuestHub.io</span> as a{' '}
-          <span className='highlight px-1'>Sr. Web3 Front-End & UI/UX Engineer (Tech Lead).</span>
+          Currently, I work for{' '}
+          <a href='https://zouq.online/' target='_blank' className='highlight px-1'>
+            Zouq
+          </a>{' '}
+          as a <span className='highlight px-1'>Lead Front-End Developer.</span>
         </p>
         <p>I also contribute to a few open-source projects.</p>
       </div>
