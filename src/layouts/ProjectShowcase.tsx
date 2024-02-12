@@ -37,7 +37,7 @@ function ProjectShowcase() {
           <a href='https://zouq.online/' target='_blank' className='highlight px-1'>
             Zouq
           </a>{' '}
-          as a <span className='highlight px-1'>Lead Front-End Developer.</span>
+          as a <span className='highlight px-1'>Lead Full-Stack Developer.</span>
         </p>
         <p>I also contribute to a few open-source projects.</p>
       </div>

@@ -61,7 +61,7 @@ export const PROJECTS = [
   },
   {
     name: 'PSVita - Persona 5 Theme',
-    description: 'A personal project, this was in the Top 10 of the most downloaded themes with 29,500+ downloads.',
+    description: 'A personal project, this was in the Top 10 of the most downloaded themes with 32,000+ downloads.',
     image: '/showcase/p5-vita-theme.webp',
     link: 'https://psvt.ovh/theme.php?id=1521459131',
   },
