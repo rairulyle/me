@@ -3,6 +3,7 @@ import '@fontsource/noto-sans-jp/500.css';
 import '@fontsource/noto-sans-jp/800.css';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className='bg-white text-black dark:bg-black dark:text-white'>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
