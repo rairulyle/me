@@ -3,7 +3,7 @@ export const PROJECTS = [
     name: 'My Wedding Invitation',
     description: 'Served as our meticulously crafted invitation letter for our esteemed and beloved guests',
     image: '/showcase/lyle-and-marga.webp',
-    link: 'https://lyle-and-marga.com/',
+    link: 'https://lyle-and-marga-wedding-rairulyle.vercel.app/',
     tech: ['SvelteKit', 'Tailwind CSS'],
   },
   {
