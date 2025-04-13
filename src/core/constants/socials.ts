@@ -1,6 +1,11 @@
-import { mdiGithub, mdiInstagram, mdiLinkedin } from '@mdi/js';
+import { mdiArrowUUpRightBold, mdiGithub, mdiInstagram, mdiLinkedin } from '@mdi/js';
 
 export const SOCIALS = [
+  {
+    name: 'Upwork',
+    url: 'https://www.upwork.com/freelancers/lylevincedelacuesta',
+    icon: mdiArrowUUpRightBold,
+  },
   {
     name: 'LinkedIn',
     url: 'https://www.linkedin.com/in/rairulyle',
