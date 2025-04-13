@@ -34,12 +34,18 @@ function ProjectShowcase() {
       <div className='space-y-2 text-xl md:text-2xl'>
         <p>
           Currently, I work for{' '}
-          <a href='https://zouq.online/' target='_blank' className='highlight px-1'>
-            Zouq
+          <a href='https://sesimi.com/' target='_blank' className='highlight px-1'>
+            Sesimi
           </a>{' '}
-          as a <span className='highlight px-1'>Lead Full-Stack Developer.</span>
+          as a <span className='highlight px-1'>Sr. Full-Stack Developer.</span>
         </p>
-        <p>I also contribute to a few open-source projects.</p>
+        <p>
+          I also contribute to a few open-source projects and do freelance work at{' '}
+          <a href='https://www.upwork.com/freelancers/lylevincedelacuesta' target='_blank' className='highlight px-1'>
+            Upwork
+          </a>
+          .
+        </p>
       </div>
 
       <div className='flex items-center justify-between'>

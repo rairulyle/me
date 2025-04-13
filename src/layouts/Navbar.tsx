@@ -26,7 +26,7 @@ function NavBar() {
           </li>
           <li className='hidden md:block'>
             <a
-              href='https://www.linkedin.com/in/rairulyle'
+              href='https://www.upwork.com/freelancers/lylevincedelacuesta'
               target='_blank'
               rel='noopener noreferrer'
               className='border-4 border-black px-6 py-4  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
