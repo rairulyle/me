@@ -9,7 +9,7 @@ function Services() {
       <div className='mb-6 space-y-3'>
         <h2 className='text-2xl font-semibold md:text-4xl'>Services I offer.</h2>
         <p className='text-xl md:text-2xl'>
-          I usually work with the following technologies, though I&apos;m framework agnostic and always open to learning new things.
+          Languages and frameworks are just tools. What I bring is architecture, best practices, and the experience that makes products last.
         </p>
         <ul className='flex flex-wrap gap-2'>
           {SKILLS.map((x, i) => (

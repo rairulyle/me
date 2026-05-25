@@ -1,25 +1,32 @@
 export const SERVICES = [
   {
-    name: 'Web Application Design & Development',
+    name: 'Software Design & Architecture',
     icon: '/fun-star.svg',
     fixedPricing: true,
     description:
-      'I am an expert in creating stunning and functional web applications that bring your ideas to life. I will design and develop a customized solution tailored to your unique needs!',
+      "I help you design systems that hold up — choosing the right tradeoffs, drawing clear boundaries, and building so the next ten features don't slow the team down. Stack-agnostic; the architecture is what matters.",
   },
   {
-    name: 'Website Performance Optimization',
+    name: 'Performance & Scalability',
     icon: '/rocket.svg',
     fixedPricing: true,
     description:
-      'Unlock the true potential of your website by enhancing its performance to new heights! With my expertise in optimization techniques, I will ensure that your website loads faster, performs smoother, and delivers an exceptional user experience.',
+      'Slow systems are usually architectural, not cosmetic. I audit and rework the parts that actually matter — data flow, rendering paths, caching, network — so your product feels fast under real load, not just in dev.',
   },
   {
-    name: 'Website Maintenance',
+    name: 'Ongoing Engineering Partnership',
     icon: '/code.svg',
     fixedPricing: false,
     description:
-      "With my meticulous care and attention to detail, I'll ensure that your website stays in top shape, delivering a flawless experience to your visitors. From regular updates to security enhancements, I've got you covered!",
+      'Long-term engineering muscle on retainer — code reviews, architectural guidance, mentorship for your team, and a steady hand on the parts of the codebase that need consistent care. Less firefighting, more compounding.',
   },
 ];
 
-export const SKILLS = ['Angular', 'React', 'SvelteKit', 'Tailwind CSS', 'Next.js', 'Node.js', 'Word Press', 'Figma'];
+export const SKILLS = [
+  'System Design',
+  'API Architecture',
+  'Performance & Scalability',
+  'Code Review',
+  'DX & Tooling',
+  'Mentorship',
+];

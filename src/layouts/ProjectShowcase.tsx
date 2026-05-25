@@ -37,7 +37,7 @@ function ProjectShowcase() {
           <a href='https://sesimi.com/' target='_blank' className='highlight px-1'>
             Sesimi
           </a>{' '}
-          as a <span className='highlight px-1'>Sr. Full-Stack Developer.</span>
+          as a <span className='highlight px-1'>Lead Platform Engineer.</span>
         </p>
         <p>
           I also contribute to a few open-source projects and do freelance work at{' '}

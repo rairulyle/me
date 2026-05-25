@@ -7,15 +7,25 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
 
-const title = 'Lyle Vince Dela Cuesta | Web Developer';
+const title = 'Lyle Vince Dela Cuesta | Software Engineer';
 const description =
-  'Konnichiwassup! I am Lyle, a Web Developer experienced in designing and building highly scalable web applications. With my attention to detail, especially for user experience, minimalism, reusability, and clean codes, I am highly capable of delivering projects efficiently and satisfying customers with attractive and user-friendly applications. I also contribute to a number of open-source projects.';
+  "Konnichiwassup! I'm Lyle, a Software Engineer focused on architecture, best practices, and the hard-won experience that makes products last. I design and ship systems that scale, partner with teams on the parts that matter, and contribute to open-source along the way.";
 const url = 'https://rairulyle.me';
 
 export const metadata: Metadata = {
   title,
   description,
-  keywords: ['Lyle Vince Dela Cuesta', 'Lyle', 'rairulyle', 'skullpluggery', 'rairu', 'Web Developer'],
+  keywords: [
+    'Lyle Vince Dela Cuesta',
+    'Lyle',
+    'rairulyle',
+    'skullpluggery',
+    'rairu',
+    'Software Engineer',
+    'Platform Engineer',
+    'Software Architect',
+    'System Design',
+  ],
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg' },
     shortcut: { url: '/favicon.svg', type: 'image/svg' },

@@ -17,7 +17,7 @@ function Hero() {
             </span>
           </span>
           <br />A passionate <br className='block md:hidden lg:block xl:hidden' />
-          <span className='highlight px-4'>Web Developer</span> from the <span className='highlight px-4'>Philippines!</span>
+          <span className='highlight px-4'>Software Engineer</span> from the <span className='highlight px-4'>Philippines!</span>
         </h1>
         <p className='text-xl lg:text-2xl'>
           Unlock Your Potential: I&apos;ll solve your website woes, <br className='hidden md:block' />
