@@ -20,8 +20,8 @@ function Hero() {
           <span className='highlight px-4'>Software Engineer</span> from the <span className='highlight px-4'>Philippines!</span>
         </h1>
         <p className='text-xl lg:text-2xl'>
-          Unlock Your Potential: I&apos;ll solve your website woes, <br className='hidden md:block' />
-          while you stay focused on your goals.
+          <span className='highlight px-1'>Anyone can ship code now.</span> <br className='hidden md:block' />
+          I build what&apos;s still standing in three years.
         </p>
         <ul className='flex gap-x-2'>
           {SOCIALS.map((x, i) => (
