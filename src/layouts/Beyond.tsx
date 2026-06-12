@@ -13,7 +13,7 @@ const Beyond = () => (
             href={pursuit.link}
             target='_blank'
             rel='noopener noreferrer'
-            className='group flex flex-col justify-between gap-y-6 border-4 border-cacao p-6 transition-colors hover:bg-cacao/10'
+            className='group flex flex-1 flex-col justify-between gap-y-6 border-4 border-cacao p-6 transition-colors hover:bg-cacao/10'
           >
             <div className='space-y-3'>
               <h3 className='text-2xl font-medium'>{pursuit.name}</h3>

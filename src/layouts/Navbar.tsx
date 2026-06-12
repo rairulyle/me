@@ -4,10 +4,10 @@ import Link from 'next/link';
 import ThemeSwitcher from '@/components/ThemeSwitcher';
 
 const LINKS = [
-  { name: 'Work', href: '/#work' },
-  { name: 'Services', href: '/#services' },
-  { name: 'Experience', href: '/#experience' },
-  { name: 'Blog', href: '/blog' },
+  { name: 'Work', href: '/#work', desktopOnly: true },
+  { name: 'Services', href: '/#services', desktopOnly: true },
+  { name: 'Experience', href: '/#experience', desktopOnly: true },
+  { name: 'Blog', href: '/blog', desktopOnly: false },
 ];
 
 const NavBar = () => (
@@ -18,17 +18,12 @@ const NavBar = () => (
     </Link>
     <ul className='flex items-center gap-x-1 md:gap-x-4'>
       {LINKS.map((link) => (
-        <li key={link.name} className='hidden md:block'>
+        <li key={link.name} className={link.desktopOnly ? 'hidden md:block' : ''}>
           <Link className='px-3 py-2 font-mono text-sm tracking-widest uppercase transition-colors hover:bg-cacao/20' href={link.href}>
             {link.name}
           </Link>
         </li>
       ))}
-      <li className='md:hidden'>
-        <Link className='px-3 py-2 font-mono text-sm tracking-widest uppercase' href='/blog'>
-          Blog
-        </Link>
-      </li>
       <li>
         <ThemeSwitcher />
       </li>

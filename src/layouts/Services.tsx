@@ -13,7 +13,7 @@ const Services = () => (
     <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
       {SERVICES.map((service) => (
         <Reveal key={service.name} className='flex'>
-          <div className='flex flex-col gap-y-6 border-4 border-cacao p-6 transition-colors hover:bg-cacao/10'>
+          <div className='flex flex-1 flex-col gap-y-6 border-4 border-cacao p-6 transition-colors hover:bg-cacao/10'>
             <SVG width='48' height='48' src={service.icon} title={service.name} />
             <div>
               <span className='font-mono text-xs tracking-widest uppercase opacity-70'>
