@@ -13,7 +13,7 @@ const Hero = () => (
       </h1>
     </Parallax>
     <p className='max-w-xl text-xl md:text-2xl'>
-      <span className='highlight px-1'>Anyone can ship code now.</span> I build what&apos;s still standing in three years.
+      <span className='highlight px-1'>Anyone can ship code now</span>. I build what&apos;s still standing in three years!
     </p>
     <p className='font-mono text-sm tracking-widest uppercase'>
       Proudly working at{' '}

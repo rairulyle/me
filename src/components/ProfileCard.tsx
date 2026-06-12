@@ -5,11 +5,12 @@ import Image from 'next/image';
 const ProfileCard = () => (
   <div className='border-4 border-cacao bg-soil p-6 text-nougat dark:bg-nougat dark:text-soil'>
     <Image
-      src='/profile-placeholder.svg'
+      src='/profile-picture.webp'
       alt='Lyle Vince Dela Cuesta'
-      width={640}
-      height={640}
+      width={585}
+      height={877}
       priority
+      sizes='(min-width: 1024px) 22rem, 90vw'
       className='w-full border-4 border-cacao'
     />
     <div className='mt-6 space-y-3 text-center'>
