@@ -1,66 +1,61 @@
 import { SOCIALS } from '@/core/constants/socials';
 import Icon from '@mdi/react';
-import NavBar from './Navbar';
 import Image from 'next/image';
 
-function Hero() {
-  return (
-    <main className='mx-auto flex min-h-[85vh] max-w-screen-8xl flex-col justify-between px-6'>
-      <NavBar></NavBar>
-      <div className='space-y-12'>
-        <h1 className='text-3xl font-medium !leading-snug md:text-4xl lg:text-7xl'>
-          Konnichiwassup, <br className='block md:hidden lg:block xl:hidden' />
-          <span>
-            I&apos;m{' '}
-            <span className='highlight px-4'>
-              Lyle <span className='font-noto'>(ライル)!</span>
-            </span>
-          </span>
-          <br />A passionate <br className='block md:hidden lg:block xl:hidden' />
-          <span className='highlight px-4'>Software Engineer</span> from the <span className='highlight px-4'>Philippines!</span>
-        </h1>
-        <p className='text-xl lg:text-2xl'>
-          <span className='highlight px-1'>Anyone can ship code now.</span> <br className='hidden md:block' />
-          I build what&apos;s still standing in three years.
+const PROFILE_SRC = '/profile-placeholder.svg';
+
+const Hero = () => (
+  <header className='flex min-h-[80vh] flex-col justify-center gap-y-10 py-12 md:py-16'>
+    <p className='font-mono text-sm tracking-widest uppercase'>
+      Konnichiwassup — I&apos;m Lyle <span className='font-noto normal-case'>(ライル)</span>, from the Philippines
+    </p>
+    <h1 className='text-[clamp(3.5rem,13vw,12rem)] leading-[0.9] font-semibold tracking-tight uppercase'>
+      Software
+      <br />
+      <span className='opacity-40'>Engineer</span>
+    </h1>
+    <div className='flex flex-col gap-10 md:flex-row md:items-end md:justify-between'>
+      <div className='space-y-8'>
+        <p className='max-w-xl text-xl md:text-2xl'>
+          <span className='highlight px-1'>Anyone can ship code now.</span> I build what&apos;s still standing in three years.
         </p>
-        <ul className='flex gap-x-2'>
-          {SOCIALS.map((x, i) => (
-            <li key={i}>
-              <a href={x.url} title={x.name} target='_blank' rel='noopener noreferrer'>
-                <Icon path={x.icon} size='32px'></Icon>
+        <p className='font-mono text-sm tracking-widest uppercase'>
+          Proudly working at{' '}
+          <a
+            href='https://sesimi.com'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='underline underline-offset-4 transition-colors hover:bg-cacao/20'
+          >
+            Sesimi
+          </a>
+        </p>
+        <ul className='flex gap-x-3'>
+          {SOCIALS.map((social) => (
+            <li key={social.name}>
+              <a
+                href={social.url}
+                title={social.name}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='block p-1 transition-transform hover:-translate-y-1'
+              >
+                <Icon path={social.icon} size='28px' />
               </a>
             </li>
           ))}
         </ul>
       </div>
-      <div>
-        <div className='flex items-center gap-x-2'>
-          <span className='text-sm'>This portfolio was built with</span>
-          <ul className='flex gap-x-2'>
-            <li>
-              <Image title='Next.js' alt='Next.js' width='18' height='18' src={`/tech/Next.js.webp`} className='grayscale'></Image>
-            </li>
-            <li>
-              <Image title='React' alt='React' width='18' height='18' src={`/tech/React.webp`} className='grayscale'></Image>
-            </li>
-
-            <li>
-              <Image
-                title='Tailwind CSS'
-                alt='Tailwind CSS'
-                width='18'
-                height='18'
-                src={`/tech/Tailwind CSS.webp`}
-                className='grayscale'
-              ></Image>
-            </li>
-          </ul>
-        </div>
-
-        <div className='my-4 border-t-4 border-black px-6 dark:border-white'></div>
-      </div>
-    </main>
-  );
-}
+      <Image
+        src={PROFILE_SRC}
+        alt='Lyle Vince Dela Cuesta'
+        width={176}
+        height={176}
+        priority
+        className='hidden border-4 border-cacao md:block'
+      />
+    </div>
+  </header>
+);
 
 export default Hero;
