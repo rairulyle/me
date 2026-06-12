@@ -1,9 +1,8 @@
 import { PROJECTS } from '@/core/constants/projects';
+import MoreProjects from '@/components/MoreProjects';
 import Parallax from '@/components/Parallax';
 import Reveal from '@/components/Reveal';
 import Section from '@/components/Section';
-import { mdiArrowTopRight } from '@mdi/js';
-import Icon from '@mdi/react';
 import Image from 'next/image';
 
 const FEATURED_COUNT = 4;
@@ -63,35 +62,7 @@ const ProjectShowcase = () => {
 
       <div>
         <h3 className='mb-4 font-mono text-sm tracking-widest uppercase opacity-70'>More projects</h3>
-        <ul className='divide-y-2 divide-cacao/40 border-y-2 border-cacao/40'>
-          {more.map((project) => (
-            <li key={project.name}>
-              <a
-                href={project.link}
-                target='_blank'
-                rel='noopener noreferrer'
-                className='group flex items-center justify-between gap-x-6 py-4'
-              >
-                <div className='min-w-0'>
-                  <span className='text-lg font-medium group-hover:underline md:text-xl'>{project.name}</span>
-                  <p className='truncate opacity-70'>{project.description}</p>
-                </div>
-                <span className='flex shrink-0 items-center gap-x-4'>
-                  {project.tech && (
-                    <span className='hidden font-mono text-xs tracking-widest uppercase opacity-70 md:block'>
-                      {project.tech.join(' · ')}
-                    </span>
-                  )}
-                  <Icon
-                    className='transition-transform group-hover:translate-x-1 group-hover:-translate-y-1'
-                    path={mdiArrowTopRight}
-                    size='20px'
-                  />
-                </span>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <MoreProjects projects={more} />
       </div>
     </Section>
   );
