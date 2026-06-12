@@ -1,25 +1,26 @@
 import { mdiSkullOutline } from '@mdi/js';
 import Icon from '@mdi/react';
+import Link from 'next/link';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 
 function NavBar() {
   return (
     <nav className='py-6 md:py-12'>
       <div className='flex items-center justify-between'>
-        <a className='inline-flex items-center gap-x-2' href='/'>
+        <Link className='inline-flex items-center gap-x-2' href='/'>
           <Icon path={mdiSkullOutline} size='48px'></Icon>
           <span className='font-noto text-2xl font-bold'>ライル</span>
-        </a>
+        </Link>
         <ul className='flex gap-x-8 text-lg font-medium lg:text-2xl xl:gap-x-16'>
           <li className='hidden md:block'>
-            <a className='px-6 py-4' href='/#showcase'>
+            <Link className='px-6 py-4' href='/#showcase'>
               Showcase
-            </a>
+            </Link>
           </li>
           <li className='hidden md:block'>
-            <a className='px-6 py-4' href='/#services'>
+            <Link className='px-6 py-4' href='/#services'>
               Services
-            </a>
+            </Link>
           </li>
           <li>
             <ThemeSwitcher></ThemeSwitcher>
@@ -29,7 +30,7 @@ function NavBar() {
               href='https://www.upwork.com/freelancers/lylevincedelacuesta'
               target='_blank'
               rel='noopener noreferrer'
-              className='border-4 border-black px-6 py-4  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
+              className='border-4 border-black px-6 py-4 transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
             >
               Hire Me
             </a>

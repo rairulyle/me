@@ -5,8 +5,6 @@ import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
 import Icon from '@mdi/react';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
-import { scrollTo } from 'seamless-scroll-polyfill';
-
 function ProjectShowcase() {
   const cardSize = 582;
   const containerElementRef = useRef<HTMLElement | null>(null);
@@ -16,17 +14,11 @@ function ProjectShowcase() {
   }, []);
 
   function swipeLeft() {
-    scrollTo(containerElementRef.current!, {
-      left: containerElementRef.current?.scrollLeft! - cardSize,
-      behavior: 'smooth',
-    });
+    containerElementRef.current?.scrollTo({ left: containerElementRef.current.scrollLeft - cardSize, behavior: 'smooth' });
   }
 
   function swipeRight() {
-    scrollTo(containerElementRef.current!, {
-      left: containerElementRef.current?.scrollLeft! + cardSize,
-      behavior: 'smooth',
-    });
+    containerElementRef.current?.scrollTo({ left: containerElementRef.current.scrollLeft + cardSize, behavior: 'smooth' });
   }
 
   return (
@@ -49,18 +41,18 @@ function ProjectShowcase() {
       </div>
 
       <div className='flex items-center justify-between'>
-        <h2 className='mb-6 mt-12 text-2xl font-semibold md:text-4xl'>Project showcase.</h2>
+        <h2 className='mt-12 mb-6 text-2xl font-semibold md:text-4xl'>Project showcase.</h2>
         <div className='hidden gap-x-2 md:flex'>
           <button
             aria-label='Swipe Left'
-            className='border-4 border-black px-3 py-2  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
+            className='border-4 border-black px-3 py-2 transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
             onClick={swipeLeft}
           >
             <Icon size='24px' path={mdiChevronLeft}></Icon>
           </button>
           <button
             aria-label='Swipe Right'
-            className='border-4 border-black px-3 py-2  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
+            className='border-4 border-black px-3 py-2 transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
             onClick={swipeRight}
           >
             <Icon size='24px' path={mdiChevronRight}></Icon>
@@ -71,7 +63,7 @@ function ProjectShowcase() {
         <span className='flex items-center gap-x-2 md:hidden'>
           <Icon className='animate-bounce-left' path={mdiChevronLeft} size='24px'></Icon> Swipe left for more.
         </span>
-        <div id='swipe-container' className='no-scrollbar flex gap-x-12 overflow-x-auto transition-transform '>
+        <div id='swipe-container' className='no-scrollbar flex gap-x-12 overflow-x-auto transition-transform'>
           {PROJECTS.map((x, i) => (
             <a
               className='flex snap-center flex-col gap-y-6 transition-transform hover:-translate-y-2'

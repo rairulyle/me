@@ -2,7 +2,7 @@ import '@fontsource-variable/outfit';
 import '@fontsource/noto-sans-jp/500.css';
 import '@fontsource/noto-sans-jp/800.css';
 import { Metadata } from 'next';
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 
 import './globals.css';
