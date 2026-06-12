@@ -1,0 +1,35 @@
+import PostHeader from '@/components/PostHeader';
+import { postMeta } from '@/lib/post-meta';
+
+export const post = {
+  title: 'Rebuilding This Site',
+  date: '2026-06-13',
+  description: 'Next.js 16, Tailwind CSS v4, MDX, and a palette named after dessert.',
+  tags: ['meta', 'next.js'],
+};
+export const metadata = postMeta(post);
+
+<PostHeader post={post} />
+
+This site just got its first real rework in years. Same skull, new bones.
+
+## What changed
+
+- **Next.js 13 → 16, React 19, Tailwind CSS v4.** The whole stack jumped to latest. Tailwind's CSS-first config means the design system now lives in one CSS file instead of a JS config.
+- **A real design system.** Three colors — Sand Nougat, Cacao Husk, Midnight Soil — doing all the work, in both light and dark.
+- **This blog.** Every post is an MDX file in the repo. Writing a new one is `mkdir`, `page.mdx`, push.
+
+## Why MDX
+
+I wanted posts to be files in the route, not rows in a CMS. With `@next/mdx`, the framework owns routing and rendering, and a post can drop in any React component from the site when plain markdown isn't enough.
+
+```ts
+export const post = {
+  title: 'Rebuilding This Site',
+  date: '2026-06-13',
+};
+```
+
+That little export is the whole "front matter" story — typed, validated at build, and the index page reads it straight off the module.
+
+More notes on architecture, AI infrastructure, and the homelab soon. It's good to have a place to put them again.

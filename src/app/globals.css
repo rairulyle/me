@@ -1,121 +1,81 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-nougat: #ffd9a0;
+  --color-cacao: #5c3b2e;
+  --color-soil: #201a17;
+
+  --font-sans: 'Outfit Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-noto: 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+
+  --breakpoint-8xl: 90rem;
+  --container-8xl: 90rem;
+
+  --animate-marquee: marquee 40s linear infinite;
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply font-sans;
+  @apply bg-nougat font-sans text-soil antialiased dark:bg-soil dark:text-nougat;
 }
 
-@layer utilities {
-  @keyframes bounce-left {
-    0%,
-    100% {
-      transform: translateX(-25%);
-      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-    }
-    50% {
-      transform: none;
-      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-    }
+::selection {
+  @apply bg-cacao text-nougat;
+}
+
+.highlight {
+  @apply bg-soil text-nougat dark:bg-nougat dark:text-soil;
+}
+
+/* Scroll reveal (used by components/Reveal.tsx) */
+.reveal {
+  opacity: 0;
+  transform: translateY(1.5rem);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
-  .animate-bounce-left {
-    animation: bounce-left 1s infinite;
+  .animate-marquee {
+    animation: none;
   }
-
-  .highlight {
-    @apply bg-black text-white dark:bg-white dark:text-black;
+  html {
+    scroll-behavior: auto;
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-  @apply lg:hidden;
+/* Inline code (block code is handled by Shiki) */
+:not(pre) > code {
+  @apply bg-cacao/15 px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-cacao/40;
 }
 
-/* Swap Utility */
-.swap {
-  @apply cursor-pointer;
+/* Shiki dual-theme switching */
+pre.shiki {
+  @apply my-6 overflow-x-auto border-2 border-cacao p-4 text-sm;
 }
-
-.swap > * {
-  @apply duration-300 ease-in-out;
-  transition-property: transform, opacity;
-}
-
-.swap-rotate .swap-on,
-.swap-rotate .swap-indeterminate,
-.swap-rotate input:indeterminate ~ .swap-on {
-  @apply rotate-45;
-}
-
-.swap-rotate input:checked ~ .swap-off,
-.swap-rotate.swap-active .swap-off,
-.swap-rotate input:indeterminate ~ .swap-off {
-  @apply -rotate-45;
-}
-
-.swap-rotate input:checked ~ .swap-on,
-.swap-rotate.swap-active .swap-on,
-.swap-rotate input:indeterminate ~ .swap-indeterminate {
-  @apply rotate-0;
-}
-
-.swap-flip {
-  transform-style: preserve-3d;
-  perspective: 16em;
-}
-.swap-flip .swap-on,
-.swap-flip .swap-indeterminate,
-.swap-flip input:indeterminate ~ .swap-on {
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
-  @apply opacity-100;
-}
-
-.swap-flip input:checked ~ .swap-off,
-.swap-flip.swap-active .swap-off,
-.swap-flip input:indeterminate ~ .swap-off {
-  transform: rotateY(-180deg);
-  backface-visibility: hidden;
-  @apply opacity-100;
-}
-
-.swap-flip input:checked ~ .swap-on,
-.swap-flip.swap-active .swap-on,
-.swap-flip input:indeterminate ~ .swap-indeterminate {
-  transform: rotateY(0deg);
-}
-
-.swap {
-  @apply relative inline-grid select-none place-content-center;
-}
-
-.swap > * {
-  @apply col-start-1 row-start-1;
-}
-
-.swap input {
-  @apply hidden;
-}
-
-.swap .swap-on,
-.swap .swap-indeterminate,
-.swap input:indeterminate ~ .swap-on {
-  @apply opacity-0;
-}
-
-.swap input:checked ~ .swap-off,
-.swap.swap-active .swap-off,
-.swap input:indeterminate ~ .swap-off {
-  @apply opacity-0;
-}
-
-.swap input:checked ~ .swap-on,
-.swap-active .swap-on,
-.swap input:indeterminate ~ .swap-indeterminate {
-  @apply opacity-100;
+.dark .shiki,
+.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
 }

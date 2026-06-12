@@ -4,7 +4,7 @@ export const SERVICES = [
     icon: '/fun-star.svg',
     fixedPricing: true,
     description:
-      "I help you design systems that hold up — choosing the right tradeoffs, drawing clear boundaries, and building so the next ten features don't slow the team down. Stack-agnostic; the architecture is what matters.",
+      "I help you design systems that hold up — including turning vibe-coded apps into real architecture: the right tradeoffs, clear boundaries, and a codebase where the next ten features don't slow the team down. Stack-agnostic; the architecture is what matters.",
   },
   {
     name: 'Performance & Scalability',
@@ -25,8 +25,12 @@ export const SERVICES = [
 export const SKILLS = [
   'System Design',
   'API Architecture',
+  'AI Architecture & Agents',
   'Performance & Scalability',
   'Code Review',
   'DX & Tooling',
   'Mentorship',
+  'Open Source',
+  'Homelab & Self-Hosting',
+  'Network Infrastructure',
 ];

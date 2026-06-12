@@ -1,48 +1,32 @@
-'use client';
-
 import { SERVICES, SKILLS } from '@/core/constants/services';
+import Marquee from '@/components/Marquee';
+import Reveal from '@/components/Reveal';
+import Section from '@/components/Section';
 import SVG from 'react-inlinesvg';
 
-function Services() {
-  return (
-    <section id='services' className='space-y-12 py-12'>
-      <div className='mb-6 space-y-3'>
-        <h2 className='text-2xl font-semibold md:text-4xl'>Services I offer.</h2>
-        <p className='text-xl md:text-2xl'>
-          Languages and frameworks are just tools. What I bring is architecture, best practices, and the experience that makes products last.
-        </p>
-        <ul className='flex flex-wrap gap-2'>
-          {SKILLS.map((x, i) => (
-            <li className='border-4 border-black px-3 py-2   dark:border-white' key={i}>
-              {x}
-            </li>
-          ))}
-        </ul>
-      </div>
-      <div className='grid grid-cols-1 gap-12 lg:grid-cols-3'>
-        {SERVICES.map((x, i) => (
-          <div className='space-y-6 border-4 border-black p-6 dark:border-white' key={i}>
-            <SVG width='52' height='52' src={x.icon} title={x.name}></SVG>
+const Services = () => (
+  <Section id='services' numeral='01' lead='What' accent='I do'>
+    <p className='max-w-3xl text-xl md:text-2xl'>
+      Languages and frameworks are just tools. What I bring is architecture, best practices, and the experience that makes products last.
+    </p>
+    <Marquee items={SKILLS} />
+    <div className='grid grid-cols-1 gap-8 lg:grid-cols-3'>
+      {SERVICES.map((service) => (
+        <Reveal key={service.name} className='flex'>
+          <div className='flex flex-1 flex-col gap-y-6 border-4 border-cacao p-6 transition-colors hover:bg-cacao/10'>
+            <SVG width='48' height='48' src={service.icon} title={service.name} />
             <div>
-              <span className='text-lg opacity-70'>{x.fixedPricing ? 'Fixed Cost' : 'Monthly Retainer'}</span>
-              <h3 className='text-2xl '>{x.name}</h3>
+              <span className='font-mono text-xs tracking-widest uppercase opacity-70'>
+                {service.fixedPricing ? 'Fixed Cost' : 'Monthly Retainer'}
+              </span>
+              <h3 className='text-2xl font-medium'>{service.name}</h3>
             </div>
-            <p>{x.description}</p>
+            <p className='leading-relaxed'>{service.description}</p>
           </div>
-        ))}
-      </div>
-      <div className='flex justify-center'>
-        <a
-          href='https://www.upwork.com/freelancers/lylevincedelacuesta'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='border-4 border-black px-6 py-4  transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
-        >
-          Hire Me
-        </a>
-      </div>
-    </section>
-  );
-}
+        </Reveal>
+      ))}
+    </div>
+  </Section>
+);
 
 export default Services;

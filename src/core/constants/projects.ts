@@ -1,4 +1,12 @@
-export const PROJECTS = [
+export type Project = {
+  name: string;
+  description: string;
+  image: string;
+  link?: string;
+  tech?: string[];
+};
+
+export const PROJECTS: Project[] = [
   {
     name: 'My Wedding Invitation',
     description: 'Served as our meticulously crafted invitation letter for our esteemed and beloved guests',
@@ -57,7 +65,6 @@ export const PROJECTS = [
     description:
       'A home project that aims to provide home automation and a minimal design GUI. Powered by Home Assistant, Google Home, and UI Lovelace Minimalist.',
     image: '/showcase/home-assistant.webp',
-    link: '#',
   },
   {
     name: 'PSVita - Persona 5 Theme',
@@ -69,7 +76,6 @@ export const PROJECTS = [
     name: 'ReliefAgad',
     description: 'A government project that facilitates automated cash aid distributions of the emergency subsidy program funds by DSWD.',
     image: '/showcase/reliefagad.webp',
-    link: '#',
     tech: ['Angular', 'Angular Material'],
   },
   {
@@ -85,7 +91,6 @@ export const PROJECTS = [
     description:
       'A personal company project in OOCL that allows users to easily extract AN/DO payload from all environments (PROD, PRE-PROD, and QA).',
     image: '/showcase/ez-search.webp',
-    link: '#',
     tech: ['Angular', 'Angular Material'],
   },
   {
@@ -93,7 +98,6 @@ export const PROJECTS = [
     description:
       'A personal company project in OOCL that allows users to easily compare database tables from all environments (PROD, PRE-PROD, and QA).',
     image: '/showcase/ez-dbcompare.webp',
-    link: '#',
     tech: ['Angular', 'Angular Material'],
   },
 ];
