@@ -1,4 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import createMDX from '@next/mdx';
 
-export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  pageExtensions: ['ts', 'tsx', 'mdx'],
+};
+
+const withMDX = createMDX({
+  options: {
+    rehypePlugins: [['@shikijs/rehype', { themes: { light: 'vitesse-light', dark: 'vitesse-dark' }, defaultColor: false }]],
+  },
+});
+
+export default withMDX(nextConfig);
