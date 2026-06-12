@@ -21,7 +21,7 @@ const Footer = () => {
             Hire me on Upwork
           </a>
           <a
-            href='mailto:lylevincedelacuesta@gmail.com'
+            href='mailto:hello@rairulyle.me'
             className='border-4 border-soil px-6 py-3 font-mono text-sm tracking-widest uppercase transition-colors hover:bg-soil hover:text-nougat dark:border-nougat dark:hover:bg-nougat dark:hover:text-soil'
           >
             Email me
