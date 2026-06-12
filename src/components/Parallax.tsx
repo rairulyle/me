@@ -25,18 +25,22 @@ const Parallax = ({ children, speed = 0.12, className = '' }: ParallaxProps) => 
     const update = () => {
       frame = 0;
       const rect = outer.getBoundingClientRect();
-      const offset = (window.innerHeight / 2 - (rect.top + rect.height / 2)) * speed;
-      inner.style.transform = `translate3d(0, ${offset.toFixed(1)}px, 0)`;
+      const distance = window.innerHeight / 2 - (rect.top + rect.height / 2);
+      const clamped = Math.max(-window.innerHeight, Math.min(window.innerHeight, distance));
+      inner.style.transform = `translate3d(0, ${(clamped * speed).toFixed(1)}px, 0)`;
     };
 
     const schedule = () => {
       if (visible && !frame) frame = requestAnimationFrame(update);
     };
 
-    const observer = new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting;
-      schedule();
-    });
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        schedule();
+      },
+      { rootMargin: '20% 0px' },
+    );
     observer.observe(outer);
 
     window.addEventListener('scroll', schedule, { passive: true });
