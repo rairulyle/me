@@ -1,6 +1,8 @@
 import '@fontsource-variable/outfit';
 import '@fontsource/noto-sans-jp/500.css';
 import '@fontsource/noto-sans-jp/800.css';
+import '@fontsource/ibm-plex-mono/400.css';
+import '@fontsource/ibm-plex-mono/500.css';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -25,6 +27,7 @@ export const metadata: Metadata = {
     'Platform Engineer',
     'Software Architect',
     'System Design',
+    'AI Architecture',
   ],
   icons: {
     icon: { url: '/favicon.svg', type: 'image/svg' },
@@ -41,10 +44,15 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', site: '@rairulyle', creator: '@rairulyle', images: `${url}/meta/og.png` },
 };
 
+const themeInit = `(()=>{try{if(localStorage.getItem('theme')==='light')document.documentElement.classList.remove('dark')}catch(e){}})()`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' className='dark'>
-      <body className='bg-white text-black dark:bg-black dark:text-white'>
+    <html lang='en' className='dark' suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
+      </head>
+      <body>
         {children}
         <Analytics />
         <SpeedInsights />

@@ -2,36 +2,29 @@
 
 import { mdiWeatherNight, mdiWhiteBalanceSunny } from '@mdi/js';
 import Icon from '@mdi/react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-function ThemeSwitcher() {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') return localStorage.getItem('theme') || 'dark';
-  });
+const ThemeSwitcher = () => {
+  const [theme, setTheme] = useState<'light' | 'dark'>(() =>
+    typeof document !== 'undefined' && !document.documentElement.classList.contains('dark') ? 'light' : 'dark',
+  );
 
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [theme]);
-
-  function toggleTheme() {
-    if (typeof window !== 'undefined') {
-      const newTheme = theme === 'light' ? 'dark' : 'light';
-      setTheme(newTheme);
-      localStorage.setItem('theme', newTheme);
-    }
-  }
+  const toggleTheme = () => {
+    const next = theme === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+    document.documentElement.classList.toggle('dark', next === 'dark');
+    localStorage.setItem('theme', next);
+  };
 
   return (
-    <label className='swap swap-rotate p-1 '>
-      <input type='checkbox' checked={theme === 'light'} onChange={toggleTheme} />
-      <Icon className='swap-on' path={mdiWhiteBalanceSunny} size='24px' />
-      <Icon className='swap-off' path={mdiWeatherNight} size='24px' />
-    </label>
+    <button
+      aria-label='Toggle theme'
+      onClick={toggleTheme}
+      className='cursor-pointer p-2 transition-transform duration-300 hover:rotate-12'
+    >
+      <Icon path={theme === 'dark' ? mdiWeatherNight : mdiWhiteBalanceSunny} size='24px' />
+    </button>
   );
-}
+};
 
 export default ThemeSwitcher;
