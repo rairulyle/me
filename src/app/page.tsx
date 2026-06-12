@@ -1,4 +1,5 @@
 import Beyond from '@/layouts/Beyond';
+import BlogPreview from '@/layouts/BlogPreview';
 import Experience from '@/layouts/Experience';
 import Footer from '@/layouts/Footer';
 import Hero from '@/layouts/Hero';
@@ -18,6 +19,7 @@ export default function Home() {
         <ProjectShowcase />
         <Experience />
         <Beyond />
+        <BlogPreview />
       </main>
       <Footer />
     </>
