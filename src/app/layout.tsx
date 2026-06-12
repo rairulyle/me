@@ -3,6 +3,7 @@ import '@fontsource/noto-sans-jp/500.css';
 import '@fontsource/noto-sans-jp/800.css';
 import '@fontsource/ibm-plex-mono/400.css';
 import '@fontsource/ibm-plex-mono/500.css';
+import { SITE_URL } from '@/lib/site';
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -12,9 +13,11 @@ import './globals.css';
 const title = 'Lyle Vince Dela Cuesta | Software Engineer';
 const description =
   "Konnichiwassup! I'm Lyle, a Software Engineer focused on architecture, best practices, and the hard-won experience that makes products last. I design and ship systems that scale, partner with teams on the parts that matter, and contribute to open-source along the way.";
-const url = 'https://rairulyle.me';
+const url = SITE_URL;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: { canonical: '/' },
   title,
   description,
   keywords: [

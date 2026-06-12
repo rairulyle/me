@@ -3,13 +3,13 @@ import Parallax from '@/components/Parallax';
 const Hero = () => (
   <header className='flex flex-col justify-center gap-y-10 py-12 md:py-16 lg:min-h-[70vh]'>
     <p className='font-mono text-sm tracking-widest uppercase'>
-      Konnichiwassup — I&apos;m Lyle <span className='font-noto normal-case'>(ライル)</span>, from the Philippines
+      Konnichiwassup! — I&apos;m Lyle <span className='font-noto normal-case'>(ライル)</span>, from the Philippines
     </p>
     <Parallax speed={0.06}>
       <h1 className='text-[clamp(3.5rem,9vw,9rem)] leading-[0.9] font-semibold tracking-tight uppercase'>
         Software
         <br />
-        <span className='opacity-40'>Engineer</span>
+        <span className='opacity-55'>Engineer</span>
       </h1>
     </Parallax>
     <p className='max-w-xl text-xl md:text-2xl'>

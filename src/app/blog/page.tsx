@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/blog' },
   title: 'Blog | Lyle Vince Dela Cuesta',
   description: 'Notes on architecture, AI, homelabs, and building software that lasts.',
 };

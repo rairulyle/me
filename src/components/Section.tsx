@@ -9,7 +9,7 @@ const Section = ({ id, numeral, lead, accent, children }: SectionProps) => (
       <h2 className='text-4xl leading-[0.95] font-semibold tracking-tight uppercase md:text-6xl'>
         {lead}
         <br />
-        <span className='opacity-30'>{accent}</span>
+        <span className='opacity-55'>{accent}</span>
       </h2>
     </div>
     {children}
