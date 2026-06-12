@@ -1,13 +1,16 @@
 import { FALLBACK_STATS, YEARS } from '@/core/constants/stats';
 import { getGithubStats, timeAgo } from '@/lib/github';
+import { getAllPosts } from '@/lib/posts';
 
 const Stats = async () => {
-  const { contributions, lastCommitAt } = await getGithubStats();
+  const [{ contributions, lastCommitAt }, posts] = await Promise.all([getGithubStats(), getAllPosts()]);
 
   const stats = [
     { value: `${YEARS}+`, label: 'Years of experience' },
-    contributions === null ? FALLBACK_STATS[0] : { value: contributions.toLocaleString('en-US'), label: 'GitHub contributions, last year' },
-    lastCommitAt === null ? FALLBACK_STATS[1] : { value: timeAgo(lastCommitAt), label: 'Since last commit' },
+    contributions === null ? FALLBACK_STATS[0] : { value: contributions.toLocaleString('en-US'), label: 'Contributions since last year' },
+    lastCommitAt === null
+      ? { value: String(posts.length), label: 'Blog posts' }
+      : { value: timeAgo(lastCommitAt), label: 'Since last commit' },
   ];
 
   return (
