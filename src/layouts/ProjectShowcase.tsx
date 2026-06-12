@@ -13,7 +13,7 @@ const ProjectShowcase = () => {
   const more = PROJECTS.slice(FEATURED_COUNT);
 
   return (
-    <Section id='work' numeral='02' title='Selected work'>
+    <Section id='work' numeral='02' lead='Selected' accent='work'>
       <div className='space-y-2 text-xl md:text-2xl'>
         <p>
           Currently, I work at{' '}

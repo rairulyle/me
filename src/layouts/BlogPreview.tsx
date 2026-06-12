@@ -8,7 +8,7 @@ const BlogPreview = async () => {
   if (posts.length === 0) return null;
 
   return (
-    <Section id='blog' numeral='05' title='Writing'>
+    <Section id='blog' numeral='05' lead='Notes &' accent='thoughts'>
       <ul className='divide-y-2 divide-cacao/40 border-y-2 border-cacao/40'>
         {posts.map((post) => (
           <li key={post.slug}>

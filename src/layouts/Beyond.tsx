@@ -5,7 +5,7 @@ import { mdiArrowTopRight } from '@mdi/js';
 import Icon from '@mdi/react';
 
 const Beyond = () => (
-  <Section id='beyond' numeral='04' title='Beyond the code'>
+  <Section id='beyond' numeral='04' lead='Beyond' accent='the code'>
     <div className='grid grid-cols-1 gap-8 md:grid-cols-2'>
       {PURSUITS.map((pursuit) => (
         <Reveal key={pursuit.name} className='flex'>

@@ -5,7 +5,7 @@ import Section from '@/components/Section';
 import SVG from 'react-inlinesvg';
 
 const Services = () => (
-  <Section id='services' numeral='01' title='What I do'>
+  <Section id='services' numeral='01' lead='What' accent='I do'>
     <p className='max-w-3xl text-xl md:text-2xl'>
       Languages and frameworks are just tools. What I bring is architecture, best practices, and the experience that makes products last.
     </p>

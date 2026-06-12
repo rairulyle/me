@@ -1,9 +1,10 @@
 import { EXPERIENCE } from '@/core/constants/experience';
+import { STATS } from '@/core/constants/stats';
 import Reveal from '@/components/Reveal';
 import Section from '@/components/Section';
 
 const Experience = () => (
-  <Section id='experience' numeral='03' title='Experience'>
+  <Section id='experience' numeral='03' lead={`${STATS[0].value} years of`} accent='experience'>
     <ol className='divide-y-2 divide-cacao/40 border-y-2 border-cacao/40'>
       {EXPERIENCE.map((job) => (
         <li key={job.company}>

@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <>
       <NavBar />
-      <main className='mx-auto flex min-h-[60vh] max-w-8xl flex-col items-start justify-center gap-y-6 px-6'>
+      <main className='mx-auto flex min-h-[80vh] max-w-8xl flex-col items-start justify-center gap-y-6 px-6 pt-24'>
         <h1 className='font-mono text-7xl font-semibold md:text-9xl'>404</h1>
         <p className='text-xl'>This page doesn&apos;t exist — or it didn&apos;t survive the rebuild.</p>
         <Link
