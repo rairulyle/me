@@ -1,4 +1,4 @@
-import { mdiArrowUUpRightBold, mdiGithub, mdiInstagram, mdiLinkedin } from '@mdi/js';
+import { mdiArrowUUpRightBold, mdiGithub, mdiLinkedin } from '@mdi/js';
 
 export const SOCIALS = [
   {
@@ -15,10 +15,5 @@ export const SOCIALS = [
     name: 'GitHub',
     url: 'https://github.com/rairulyle',
     icon: mdiGithub,
-  },
-  {
-    name: 'Instagram',
-    url: 'https://www.instagram.com/rairulyle',
-    icon: mdiInstagram,
   },
 ];
