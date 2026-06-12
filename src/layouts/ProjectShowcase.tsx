@@ -1,4 +1,5 @@
 import { PROJECTS } from '@/core/constants/projects';
+import Parallax from '@/components/Parallax';
 import Reveal from '@/components/Reveal';
 import Section from '@/components/Section';
 import { mdiArrowTopRight } from '@mdi/js';
@@ -40,13 +41,15 @@ const ProjectShowcase = () => {
           <Reveal key={project.name}>
             <a href={project.link} target='_blank' rel='noopener noreferrer' className='group block space-y-4'>
               <div className='overflow-hidden border-4 border-cacao'>
-                <Image
-                  className='w-full transition-transform duration-500 group-hover:scale-[1.03]'
-                  src={project.image}
-                  width={1164}
-                  height={1290}
-                  alt={project.name}
-                />
+                <Parallax speed={-0.05}>
+                  <Image
+                    className='w-full scale-[1.12] transition-transform duration-500 group-hover:scale-[1.16]'
+                    src={project.image}
+                    width={1164}
+                    height={1290}
+                    alt={project.name}
+                  />
+                </Parallax>
               </div>
               <div className='flex items-baseline justify-between gap-x-4'>
                 <h3 className='text-2xl font-medium group-hover:underline'>{project.name}</h3>

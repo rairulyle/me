@@ -1,3 +1,4 @@
+import Parallax from '@/components/Parallax';
 import { SOCIALS } from '@/core/constants/socials';
 import { mdiSkullOutline } from '@mdi/js';
 import Icon from '@mdi/react';
@@ -8,9 +9,11 @@ const Footer = () => {
   return (
     <footer className='border-t-4 border-cacao'>
       <div className='mx-auto max-w-8xl space-y-12 px-6 py-20 md:py-28'>
-        <h2 className='max-w-4xl text-4xl leading-[1.05] font-semibold tracking-tight uppercase md:text-7xl'>
-          Let&apos;s build something <span className='highlight px-2'>that lasts.</span>
-        </h2>
+        <Parallax speed={0.08}>
+          <h2 className='max-w-4xl text-4xl leading-[1.05] font-semibold tracking-tight uppercase md:text-7xl'>
+            Let&apos;s build something <span className='highlight px-2'>that lasts.</span>
+          </h2>
+        </Parallax>
         <div className='flex flex-wrap gap-4'>
           <a
             href='https://www.upwork.com/freelancers/lylevincedelacuesta'

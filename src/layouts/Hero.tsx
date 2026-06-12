@@ -1,3 +1,4 @@
+import Parallax from '@/components/Parallax';
 import { SOCIALS } from '@/core/constants/socials';
 import Icon from '@mdi/react';
 import Image from 'next/image';
@@ -9,11 +10,13 @@ const Hero = () => (
     <p className='font-mono text-sm tracking-widest uppercase'>
       Konnichiwassup — I&apos;m Lyle <span className='font-noto normal-case'>(ライル)</span>, from the Philippines
     </p>
-    <h1 className='text-[clamp(3.5rem,13vw,12rem)] leading-[0.9] font-semibold tracking-tight uppercase'>
-      Software
-      <br />
-      <span className='opacity-40'>Engineer</span>
-    </h1>
+    <Parallax speed={0.18}>
+      <h1 className='text-[clamp(3.5rem,13vw,12rem)] leading-[0.9] font-semibold tracking-tight uppercase'>
+        Software
+        <br />
+        <span className='opacity-40'>Engineer</span>
+      </h1>
+    </Parallax>
     <div className='flex flex-col gap-10 md:flex-row md:items-end md:justify-between'>
       <div className='space-y-8'>
         <p className='max-w-xl text-xl md:text-2xl'>
@@ -46,14 +49,9 @@ const Hero = () => (
           ))}
         </ul>
       </div>
-      <Image
-        src={PROFILE_SRC}
-        alt='Lyle Vince Dela Cuesta'
-        width={176}
-        height={176}
-        priority
-        className='hidden border-4 border-cacao md:block'
-      />
+      <Parallax speed={-0.08} className='hidden md:block'>
+        <Image src={PROFILE_SRC} alt='Lyle Vince Dela Cuesta' width={176} height={176} priority className='border-4 border-cacao' />
+      </Parallax>
     </div>
   </header>
 );
