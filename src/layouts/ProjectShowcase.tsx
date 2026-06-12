@@ -1,95 +1,97 @@
-'use client';
-
 import { PROJECTS } from '@/core/constants/projects';
-import { mdiChevronLeft, mdiChevronRight } from '@mdi/js';
+import Reveal from '@/components/Reveal';
+import Section from '@/components/Section';
+import { mdiArrowTopRight } from '@mdi/js';
 import Icon from '@mdi/react';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
-function ProjectShowcase() {
-  const cardSize = 582;
-  const containerElementRef = useRef<HTMLElement | null>(null);
 
-  useEffect(() => {
-    containerElementRef.current = document.getElementById('swipe-container');
-  }, []);
+const FEATURED_COUNT = 4;
 
-  function swipeLeft() {
-    containerElementRef.current?.scrollTo({ left: containerElementRef.current.scrollLeft - cardSize, behavior: 'smooth' });
-  }
-
-  function swipeRight() {
-    containerElementRef.current?.scrollTo({ left: containerElementRef.current.scrollLeft + cardSize, behavior: 'smooth' });
-  }
+const ProjectShowcase = () => {
+  const featured = PROJECTS.slice(0, FEATURED_COUNT);
+  const more = PROJECTS.slice(FEATURED_COUNT);
 
   return (
-    <section id='showcase'>
+    <Section id='work' numeral='02' title='Selected work'>
       <div className='space-y-2 text-xl md:text-2xl'>
         <p>
-          Currently, I work for{' '}
-          <a href='https://sesimi.com/' target='_blank' className='highlight px-1'>
+          Currently, I work at{' '}
+          <a href='https://sesimi.com/' target='_blank' rel='noopener noreferrer' className='highlight px-1'>
             Sesimi
           </a>{' '}
           as a <span className='highlight px-1'>Lead Platform Engineer.</span>
         </p>
         <p>
-          I also contribute to a few open-source projects and do freelance work at{' '}
-          <a href='https://www.upwork.com/freelancers/lylevincedelacuesta' target='_blank' className='highlight px-1'>
+          I also contribute to open-source and freelance on{' '}
+          <a
+            href='https://www.upwork.com/freelancers/lylevincedelacuesta'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='highlight px-1'
+          >
             Upwork
           </a>
           .
         </p>
       </div>
 
-      <div className='flex items-center justify-between'>
-        <h2 className='mt-12 mb-6 text-2xl font-semibold md:text-4xl'>Project showcase.</h2>
-        <div className='hidden gap-x-2 md:flex'>
-          <button
-            aria-label='Swipe Left'
-            className='border-4 border-black px-3 py-2 transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
-            onClick={swipeLeft}
-          >
-            <Icon size='24px' path={mdiChevronLeft}></Icon>
-          </button>
-          <button
-            aria-label='Swipe Right'
-            className='border-4 border-black px-3 py-2 transition-colors hover:bg-black hover:text-white dark:border-white dark:hover:bg-white dark:hover:text-black'
-            onClick={swipeRight}
-          >
-            <Icon size='24px' path={mdiChevronRight}></Icon>
-          </button>
-        </div>
-      </div>
-      <div className='space-y-3'>
-        <span className='flex items-center gap-x-2 md:hidden'>
-          <Icon className='animate-bounce-left' path={mdiChevronLeft} size='24px'></Icon> Swipe left for more.
-        </span>
-        <div id='swipe-container' className='no-scrollbar flex gap-x-12 overflow-x-auto transition-transform'>
-          {PROJECTS.map((x, i) => (
-            <a
-              className='flex snap-center flex-col gap-y-6 transition-transform hover:-translate-y-2'
-              key={i}
-              href={x.link}
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <Image className='min-w-[326px] md:min-w-[582px]' src={x.image} width='1164' height='1290' alt={x.name}></Image>
-              <div className='space-y-2'>
-                <span className='text-xl font-semibold'>{x.name}</span>
-                <ul className='flex gap-x-2'>
-                  {x.tech?.map((x, i) => (
-                    <li key={i}>
-                      <Image title={x} alt={x} width='24' height='24' src={`/tech/${x}.webp`} className='grayscale'></Image>
-                    </li>
-                  ))}
-                </ul>
+      <div className='grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2'>
+        {featured.map((project) => (
+          <Reveal key={project.name}>
+            <a href={project.link} target='_blank' rel='noopener noreferrer' className='group block space-y-4'>
+              <div className='overflow-hidden border-4 border-cacao'>
+                <Image
+                  className='w-full transition-transform duration-500 group-hover:scale-[1.03]'
+                  src={project.image}
+                  width={1164}
+                  height={1290}
+                  alt={project.name}
+                />
               </div>
-              <p className='w-full md:w-[80%]'>{x.description}</p>
+              <div className='flex items-baseline justify-between gap-x-4'>
+                <h3 className='text-2xl font-medium group-hover:underline'>{project.name}</h3>
+                {project.tech && <span className='font-mono text-xs tracking-widest uppercase opacity-70'>{project.tech.join(' · ')}</span>}
+              </div>
+              <p className='max-w-xl opacity-80'>{project.description}</p>
             </a>
-          ))}
-        </div>
+          </Reveal>
+        ))}
       </div>
-    </section>
+
+      <div>
+        <h3 className='mb-4 font-mono text-sm tracking-widest uppercase opacity-70'>More projects</h3>
+        <ul className='divide-y-2 divide-cacao/40 border-y-2 border-cacao/40'>
+          {more.map((project) => (
+            <li key={project.name}>
+              <a
+                href={project.link}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='group flex items-center justify-between gap-x-6 py-4'
+              >
+                <div className='min-w-0'>
+                  <span className='text-lg font-medium group-hover:underline md:text-xl'>{project.name}</span>
+                  <p className='truncate opacity-70'>{project.description}</p>
+                </div>
+                <span className='flex shrink-0 items-center gap-x-4'>
+                  {project.tech && (
+                    <span className='hidden font-mono text-xs tracking-widest uppercase opacity-70 md:block'>
+                      {project.tech.join(' · ')}
+                    </span>
+                  )}
+                  <Icon
+                    className='transition-transform group-hover:translate-x-1 group-hover:-translate-y-1'
+                    path={mdiArrowTopRight}
+                    size='20px'
+                  />
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Section>
   );
-}
+};
 
 export default ProjectShowcase;
