@@ -25,8 +25,12 @@ export const SERVICES = [
 export const SKILLS = [
   'System Design',
   'API Architecture',
+  'AI Architecture & Agents',
   'Performance & Scalability',
   'Code Review',
   'DX & Tooling',
   'Mentorship',
+  'Open Source',
+  'Homelab & Self-Hosting',
+  'Network Infrastructure',
 ];
