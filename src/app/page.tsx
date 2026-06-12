@@ -32,7 +32,7 @@ export default function Home() {
       <main className='mx-auto max-w-8xl px-6 pt-24 md:pt-28'>
         <div className='gap-x-12 lg:grid lg:grid-cols-[22rem_1fr] xl:gap-x-16'>
           <aside className='pt-6 lg:pt-12'>
-            <div className='mx-auto max-w-sm lg:sticky lg:top-28'>
+            <div className='mx-auto max-w-sm lg:sticky lg:top-40'>
               <ProfileCard />
             </div>
           </aside>
